@@ -1,0 +1,181 @@
+shopname: Select a Category #Name for the main shop window
+categories:
+  potions:
+    name: §r§2Potions #name of the category
+    item: 373 #item that will show (id)
+    meta: 0 #the meta of the item
+    items:
+      - name: Normal Potion
+        id: 373
+        meta: 0
+        cost: 100
+        amount: 1
+      - name: §dRegeneration I Potion
+        id: 373
+        meta: 28
+        cost: 100
+        amount: 1
+      - name: §dRegeneration II Potion
+        id: 373
+        meta: 30
+        cost: 100
+        amount: 1
+      - name: §dRegeneration I Potion Splash
+        id: 438
+        meta: 29
+        cost: 100
+        amount: 1
+      - name: §dRegeneration II Potion Splash
+        id: 438
+        meta: 30
+        cost: 100
+        amount: 1
+      - name: §cInstant Health I Potion
+        id: 373
+        meta: 21
+        cost: 100
+        amount: 1
+      - name: §cInstant Health II Potion
+        id: 373
+        meta: 22
+        cost: 100
+        amount: 1
+      - name: §cInstant Health I Potion Splash
+        id: 438
+        meta: 21
+        cost: 100
+        amount: 1
+      - name: §cInstant Health II Potion Splash
+        id: 438
+        meta: 22
+        cost: 100
+        amount: 1
+      - name: §6Fire Resistance I Potion
+        id: 373
+        meta: 13
+        cost: 100
+        amount: 1
+      - name: §6Fire Resistance I Potion Splash
+        id: 438
+        meta: 13
+        cost: 100
+        amount: 1
+      - name: §aJump Boost I Potion
+        id: 373
+        meta: 9
+        cost: 100
+        amount: 1
+      - name: §aJump Boost II Potion
+        id: 373
+        meta: 11
+        cost: 100
+        amount: 1
+      - name: §aJump Boost I Potion Splash
+        id: 438
+        meta: 9
+        cost: 100
+        amount: 1
+      - name: §aJump Boost II Potion Splash
+        id: 438
+        meta: 11
+        cost: 100
+        amount: 1
+  blocks:
+    name: §r§6Blocks
+    item: 2
+    meta: 0
+    items:
+      - name: Cobblestone Blocks
+        id: 4
+        meta: 0
+        cost: 10
+        amount: 64
+      - name: Wood Logs
+        id: 17
+        meta: 0
+        cost: 40
+        amount: 64
+      - name: §bDiamond Ore
+        id: 56
+        meta: 0
+        cost: 1000
+        amount: 1
+  tools:
+    name: §r§4Tools
+    item: 292
+    meta: 0
+    items:
+      - name: Wood Hoe
+        id: 290
+        meta: 0
+        cost: 10
+        amount: 1
+      - name: Stone Hoe
+        id: 291
+        meta: 0
+        cost: 40
+        amount: 1
+      - name: Iron Hoe
+        id: 292
+        meta: 0
+        cost: 1000
+        amount: 1
+      - name: Diamond Hoe
+        id: 293
+        meta: 0
+        cost: 1000
+        amount: 1
+      - name: Gold Hoe
+        id: 294
+        meta: 0
+        cost: 1000
+        amount: 1
+  armor:
+    name: §r§bArmor
+    item: 311
+    meta: 0
+    items:
+      - name: §r§bDiamond Helmet
+        id: 310
+        meta: 0
+        cost: 500
+        amount: 1
+      - name: §r§bDiamond Chestplate
+        id: 311
+        meta: 0
+        cost: 1000
+        amount: 1
+      - name: §r§bDiamond Leggings
+        id: 312
+        meta: 0
+        cost: 1000
+        amount: 1
+      - name: §r§bDiamond Boots
+        id: 313
+        meta: 0
+        cost: 500
+        amount: 1
+      - name: §rIron Helmet
+        id: 306
+        meta: 0
+        cost: 200
+        amount: 1
+      - name: §rIron Chestplate
+        id: 307
+        meta: 0
+        cost: 500
+        amount: 1
+      - name: §rIron Leggings
+        id: 308
+        meta: 0
+        cost: 500
+        amount: 1
+      - name: §rIron Boots
+        id: 309
+        meta: 0
+        cost: 200
+        amount: 1
+
+
+
+
