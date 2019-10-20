@@ -1,0 +1,19 @@
+name: ShopUI
+version: 0.2.1
+api: 3.9.3
+author: Todoe56
+main: todoe56\shopui\shopui
+commands:
+  shop:
+    description: Main Shop Command by Todoe56
+    usage: /shop
+    permission: shop.command
+permissions:
+  shop:
+    default: true
+    description:
+    children:
+      shop.command:
+        default: true
+        description: Shop permission
+
