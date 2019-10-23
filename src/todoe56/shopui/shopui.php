@@ -11,6 +11,10 @@ use pocketmine\Player;
 use pocketmine\inventory\transaction\action\SlotChangeAction;
 use pocketmine\utils\Config;
 
+//exp
+use pocketmine\item\enchantment\Enchantment;
+use pocketmine\item\enchantment\EnchantmentInstance;
+
 class shopui extends PluginBase implements Listener{
     private $config;
     private $economy;
@@ -33,6 +37,8 @@ class shopui extends PluginBase implements Listener{
             case "shop":
                 if($sender instanceof Player){
                     $this->openShopo($sender);
+                } else {
+                    $sender->sendMessage("Only players can use this command.");
                 }
                 return true;
                 break;
@@ -86,10 +92,25 @@ class shopui extends PluginBase implements Listener{
                     $cost = $itemm["cost"];
                     $item->setCount($itemm["amount"]);
                     $item->setLore(["Cost: $cost"]);
+                    if(isset($itemm["enchantments"])){
+                        foreach ($itemm["enchantments"] as $encha){
+                            $ench = explode(":", $encha);
+                            $enchantment = Enchantment::getEnchantmentByName($ench[0]);
+                            if($enchantment == null){
+                                $ench1 = $ench[0];
+                                return $player->sendMessage("There has been an error getting the enchantment '$ench1'.");
+                            }
+                            $enchInstance = new EnchantmentInstance($enchantment, $ench[1]);
+                            $item->addEnchantment($enchInstance);
+                        }
+                    }
                     $menu->getInventory()->addItem($item);
 
+
                 }
+
                 $item = Item::get(35, 14);
+
                 $item->setCustomName("§4Go Back");
 
                 $menu->getInventory()->setItem(26, $item);
@@ -113,6 +134,18 @@ class shopui extends PluginBase implements Listener{
                                      $this->economy->reduceMoney($sender->getName(), $itemm["cost"]);
                                      $cost  = $itemm["cost"];
                                      $sender->sendMessage("You bought $name for $cost.");
+                                     if(isset($itemm["enchantments"])){
+                                         foreach ($itemm["enchantments"] as $encha){
+                                             $ench = explode(":", $encha);
+                                             $enchantment = Enchantment::getEnchantmentByName($ench[0]);
+                                             if($enchantment == null){
+                                                 $ench1 = $ench[0];
+                                                 return $sender->sendMessage("There has been an error getting the enchantment '$ench1'.");
+                                             }
+                                             $enchInstance = new EnchantmentInstance($enchantment, $ench[1]);
+                                             $item->addEnchantment($enchInstance);
+                                         }
+                                     }
                                      $sender->getInventory()->addItem($item);
                                  }else{
                                      $sender->sendMessage("Your inventory is full!");
