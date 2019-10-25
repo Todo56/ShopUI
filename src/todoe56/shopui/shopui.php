@@ -10,8 +10,6 @@ use pocketmine\item\Item;
 use pocketmine\Player;
 use pocketmine\inventory\transaction\action\SlotChangeAction;
 use pocketmine\utils\Config;
-
-//exp
 use pocketmine\item\enchantment\Enchantment;
 use pocketmine\item\enchantment\EnchantmentInstance;
 
@@ -52,6 +50,9 @@ class shopui extends PluginBase implements Listener{
         foreach ($all["categories"] as $o){
             $item = Item::get($o["item"], $o["meta"]);
             $item->setCustomName($o["name"]);
+            if(isset($o["lore"])){
+                $item->setLore($o["lore"]);
+            }
             $menu->getInventory()->addItem($item);
         }
         $menu->readonly();
@@ -105,8 +106,6 @@ class shopui extends PluginBase implements Listener{
                         }
                     }
                     $menu->getInventory()->addItem($item);
-
-
                 }
 
                 $item = Item::get(35, 14);
@@ -157,9 +156,6 @@ class shopui extends PluginBase implements Listener{
                     return true;
                 });
                 $menu->send($player);
-
-
-
             }
         }
     }
