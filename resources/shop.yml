@@ -1,7 +1,9 @@
 shopname: Select a Category
+shoptype: single #single or double
 categories:
   potions:
     name: §r§2Potions
+    type: double #single or double
     item: 373
     meta: 0
     lore:
@@ -88,6 +90,7 @@ categories:
         amount: 1
   blocks:
     name: §r§6Blocks
+    type: single #single or double
     item: 2
     meta: 0
     lore:
@@ -113,6 +116,7 @@ categories:
         amount: 1
   tools:
     name: §r§4Tools
+    type: single #single or double
     item: 292
     meta: 0
     lore:
@@ -151,6 +155,7 @@ categories:
         amount: 1
   armor:
     name: §r§bArmor
+    type: single #single or double
     item: 311
     meta: 0
     lore:
