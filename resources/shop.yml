@@ -4,6 +4,9 @@ categories:
     name: §r§2Potions
     item: 373
     meta: 0
+    lore:
+      - Select Me!
+      - Just some normal and splash potions :D
     items:
       - name: Normal Potion
         id: 373
@@ -87,6 +90,8 @@ categories:
     name: §r§6Blocks
     item: 2
     meta: 0
+    lore:
+      - Basic Blocks
     items:
       - name: Cobblestone Blocks
         id: 4
@@ -110,6 +115,8 @@ categories:
     name: §r§4Tools
     item: 292
     meta: 0
+    lore:
+      - Hoes
     items:
       - name: Wood Hoe
         id: 290
@@ -146,6 +153,8 @@ categories:
     name: §r§bArmor
     item: 311
     meta: 0
+    lore:
+      - Diamond and iron armor.
     items:
       - name: §r§bDiamond Helmet
         id: 310
