@@ -134,14 +134,14 @@ class shopui extends PluginBase implements Listener
                     $all = $this->config->getAll();
                     if ($itemClicked->getName() == "§4Go Back") {
                         $sender->removeWindow($action->getInventory());
-                        usleep(200000);
+                        usleep(100000);
                         $this->openShopo($sender);
                     }
                     foreach ($all["categories"] as $o) {
                         foreach ($o["items"] as $itemm) {
                             if ($itemm["name"] == $name) {
                                 $sender->removeWindow($action->getInventory());
-                                usleep(200000);
+                                usleep(10000);
                                 $this->openShop($this->category, $sender);
                                 $item = Item::get($itemm["id"], $itemm["meta"]);
                                 $item->setCount($itemm["amount"]);
@@ -159,6 +159,11 @@ class shopui extends PluginBase implements Listener
                                             }
                                             $enchInstance = new EnchantmentInstance($enchantment, $ench[1]);
                                             $item->addEnchantment($enchInstance);
+                                        }
+                                    }
+                                    if(isset($itemm["keepname"])){
+                                        if($itemm["keepname"] == true){
+                                            $item->setCustomName($name);
                                         }
                                     }
                                     $sender->getInventory()->addItem($item);
