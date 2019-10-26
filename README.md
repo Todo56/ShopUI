@@ -1,6 +1,6 @@
 ## Information
 ShopUI is a simple shop system with categories made with a chestui.<br>
-[![](https://poggit.pmmp.io/shield.state/ShopUI)](https://poggit.pmmp.io/p/ShopUI)
+[![](https://poggit.pmmp.io/shield.state/ShopUI)](https://poggit.pmmp.io/p/ShopUI)[![HitCount](http://hits.dwyl.io/Todo56/ShopUI.svg)](http://hits.dwyl.io/Todo56/ShopUI)
 ## Commands
 The main and only command is /shop.
 ## Contact
