@@ -4,4 +4,9 @@ branches:
 projects:
   ShopUI:
     path: ""
+    excludeDirs:
+    - "resources/github"
+    libs:
+    - src: muqsit/invmenu/InvMenu
+      version: ^2.1.0
 ...
