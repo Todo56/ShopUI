@@ -15,6 +15,7 @@ The only dependency is economy API.
 - Select whether the item's name should be kept.
 
 ## Example config
+```
 hopname: Select a Category #Sets the shop name
 shoptype: single #single or double
 categories: # Categories or your shop
@@ -46,3 +47,4 @@ categories: # Categories or your shop
         meta: 30
         cost: 100
         amount: 1
+```
