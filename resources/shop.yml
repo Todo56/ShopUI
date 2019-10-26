@@ -31,7 +31,7 @@ categories:
         cost: 100
         amount: 1
         enchantments:
-          - "sharpness:10"
+          - "sharpness:120"
           - "efficiency:5"
       - name: §dRegeneration II Potion Splash
         id: 438
@@ -88,6 +88,115 @@ categories:
         meta: 11
         cost: 100
         amount: 1
+      - name: §bSpeed I Potion
+        id: 373
+        meta: 15
+        cost: 100
+        amount: 1
+      - name: §bSpeed II Potion
+        id: 373
+        meta: 16
+        cost: 100
+        amount: 1
+      - name: §bSpeed I Potion Splash
+        id: 438
+        meta: 15
+        cost: 100
+        amount: 1
+      - name: §bSpeed II Potion Splash
+        id: 438
+        meta: 16
+        cost: 100
+        amount: 1
+      - name: §4Strength I Potion
+        id: 373
+        meta: 32
+        cost: 100
+        amount: 1
+      - name: §4Strength II Potion
+        id: 373
+        meta: 33
+        cost: 100
+        amount: 1
+      - name: §4Strength I Potion Splash
+        id: 438
+        meta: 32
+        cost: 100
+        amount: 1
+      - name: §4Strength II Potion Splash
+        id: 438
+        meta: 33
+        cost: 100
+        amount: 1
+# Bad effects
+      - name: §4Instant Damage I Potion Splash
+        id: 438
+        meta: 23
+        cost: 100
+        amount: 1
+      - name: §4Instant Damage II Potion Splash
+        id: 438
+        meta: 24
+        cost: 100
+        amount: 1
+      - name: §2Poison I Potion Splash
+        id: 438
+        meta: 26
+        cost: 100
+        amount: 1
+      - name: §2Poison II Potion Splash
+        id: 438
+        meta: 27
+        cost: 100
+        amount: 1
+      - name: §0Wither II Potion Splash
+        id: 438
+        meta: 36
+        cost: 100
+        amount: 1
+      - name: §0Weakness I Potion Splash
+        id: 438
+        meta: 35
+        cost: 100
+        amount: 1
+      - name: §0Master Turtle Potion Splash
+        id: 438
+        meta: 35
+        cost: 100
+        amount: 1
+      - name: §fSlowfall I Potion
+        id: 438
+        meta: 35
+        cost: 100
+        amount: 1
+  food:
+    name: §r§7Food
+    type: single #single or double
+    item: 364
+    meta: 0
+    lore:
+      - Food
+    items:
+      - name: Steaks (x64)
+        id: 364
+        meta: 0
+        cost: 10
+        amount: 64
+      - name: Chicken (x64)
+        id: 366
+        meta: 0
+        cost: 10
+        amount: 64
+      - name: Rabbit (x64)
+        id: 412
+        meta: 0
+        cost: 10
+        amount: 64
+      - name: Porkchop (x64)
+        id: 320
+        meta: 0
+        cost: 10
+        amount: 64
   blocks:
     name: §r§6Blocks
     type: single #single or double
@@ -201,6 +310,136 @@ categories:
         meta: 0
         cost: 200
         amount: 1
+      - name: §rChain Helmet
+        id: 302
+        meta: 0
+        cost: 150
+        amount: 1
+      - name: §rChain Chestplate
+        id: 303
+        meta: 0
+        cost: 250
+        amount: 1
+      - name: §rChain Leggings
+        id: 304
+        meta: 0
+        cost: 250
+        amount: 1
+      - name: §rChain Boots
+        id: 305
+        meta: 0
+        cost: 150
+        amount: 1
+      - name: §6Gold Helmet
+        id: 314
+        meta: 0
+        cost: 150
+        amount: 1
+      - name: §6Gold Chestplate
+        id: 315
+        meta: 0
+        cost: 250
+        amount: 1
+      - name: §6Gold Leggings
+        id: 316
+        meta: 0
+        cost: 250
+        amount: 1
+      - name: §6Gold Boots
+        id: 317
+        meta: 0
+        cost: 150
+        amount: 1
+      - name: §cLeather Helmet
+        id: 298
+        meta: 0
+        cost: 150
+        amount: 1
+      - name: §cLeather Chestplate
+        id: 299
+        meta: 0
+        cost: 250
+        amount: 1
+      - name: §cLeather Leggings
+        id: 300
+        meta: 0
+        cost: 250
+        amount: 1
+      - name: §cLeather Boots
+        id: 301
+        meta: 0
+        cost: 150
+        amount: 1
+  miscellaneous:
+    name: §r§cMiscellaneous
+    type: single #single or double
+    item: 264
+    meta: 0
+    lore:
+      - Other stuff...
+    items:
+      - name: Ender Chest
+        id: 130
+        meta: 0
+        cost: 1000
+        amount: 1
+      - name: Crafting Table
+        id: 58
+        meta: 0
+        cost: 40
+        amount: 1
+      - name: Furnace
+        id: 61
+        meta: 0
+        cost: 40
+        amount: 1
+      - name: JukeBox
+        id: 84
+        meta: 0
+        cost: 500
+        amount: 1
+      - name: Chest
+        id: 54
+        meta: 0
+        cost: 40
+        amount: 1
+      - name: Note Block
+        id: 25
+        meta: 0
+        cost: 200
+        amount: 1      
+      - name: Enchantment Table
+        id: 116
+        meta: 0
+        cost: 1000
+        amount: 1
+  weapons:
+    name: §r§eWeapons
+    type: single #single or double
+    item: 276	
+    meta: 0
+    lore:
+      - Weapons
+    items:
+      - name: §6Fire Sword
+        id: 276
+        meta: 0
+        cost: 500
+        amount: 1
+        enchantments:
+          - "fire_aspect:2"
+          - "sharpness:3"
+          - "mending:1"
+      - name: §kl§r§3The Unbreakable§kl
+        id: 276
+        meta: 0
+        cost: 1000
+        amount: 1
+        enchantments:
+          - "unbreaking:10"
+          - "mending:1"
+          - "sharpness:10"
+
 
 
 
