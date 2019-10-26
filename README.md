@@ -7,3 +7,9 @@ The main and only command is /shop.
 If you find any bug please open a github issue.
 ## Dependecies
 The only dependency is economy API.
+## Features
+- You can select the type of chest (single or double).
+- Enchantments per items.
+- Custom lore for categories.
+- Up to 52 items for category.
+- Select whether the item's name should be kept.
