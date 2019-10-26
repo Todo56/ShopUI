@@ -19,9 +19,9 @@
 
 namespace todoe56\shopui\libs\muqsit\invmenu\inventories;
 
-use todoe56\shopui\libs\pocketmine\block\Block;
-use todoe56\shopui\libs\pocketmine\network\mcpe\protocol\types\WindowTypes;
-use todoe56\shopui\libs\pocketmine\tile\Tile;
+use pocketmine\block\Block;
+use pocketmine\network\mcpe\protocol\types\WindowTypes;
+use pocketmine\tile\Tile;
 
 class ChestInventory extends SingleBlockInventory{
 

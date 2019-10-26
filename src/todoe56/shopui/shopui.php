@@ -4,7 +4,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use todo56\shopui\libs\muqsit\invmenu\{InvMenu, InvMenuHandler};
+use todoe56\shopui\libs\muqsit\invmenu\{InvMenu, InvMenuHandler};
 use pocketmine\item\Item;
 use pocketmine\Player;
 use pocketmine\inventory\transaction\action\SlotChangeAction;
