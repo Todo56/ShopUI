@@ -6,4 +6,4 @@ The main and only command is /shop.
 ## Contact
 If you find any bug please open a github issue.
 ## Dependecies
-The only dependency is [InvMenu](https://github.com/Muqsit/InvMenu) by Muqsit.
+The only dependency is economy API.
