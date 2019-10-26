@@ -17,9 +17,9 @@
  *
 */
 
-namespace muqsit\invmenu;
+namespace todoe56\shopui\libs\muqsit\invmenu;
 
-use muqsit\invmenu\inventories\BaseFakeInventory;
+use todoe56\shopui\libs\muqsit\invmenu\inventories\BaseFakeInventory;
 
 use pocketmine\Player;
 

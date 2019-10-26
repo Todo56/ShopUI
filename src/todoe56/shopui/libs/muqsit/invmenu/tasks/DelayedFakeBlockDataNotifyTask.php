@@ -17,9 +17,9 @@
  *
 */
 
-namespace muqsit\invmenu\tasks;
+namespace todoe56\shopui\libs\muqsit\invmenu\tasks;
 
-use muqsit\invmenu\inventories\BaseFakeInventory;
+use todoe56\shopui\libs\muqsit\invmenu\inventories\BaseFakeInventory;
 
 use pocketmine\Player;
 use pocketmine\scheduler\Task;

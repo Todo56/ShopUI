@@ -17,7 +17,7 @@
  *
 */
 
-namespace muqsit\invmenu\utils;
+namespace todoe56\shopui\libs\muqsit\invmenu\utils;
 
 use pocketmine\math\Vector3;
 

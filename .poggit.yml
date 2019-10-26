@@ -7,6 +7,6 @@ projects:
     excludeDirs:
     - "resources/github"
     libs:
-    - src: muqsit/invmenu/InvMenu
+    - src: todoe56/shopui/libs/muqsit/invmenu/InvMenu
       version: ^2.1.0
 ...

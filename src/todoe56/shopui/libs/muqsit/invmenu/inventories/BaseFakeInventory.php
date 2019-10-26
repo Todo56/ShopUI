@@ -17,12 +17,12 @@
  *
 */
 
-namespace muqsit\invmenu\inventories;
+namespace todoe56\shopui\libs\muqsit\invmenu\inventories;
 
-use muqsit\invmenu\InvMenu;
-use muqsit\invmenu\InvMenuHandler;
-use muqsit\invmenu\tasks\DelayedFakeBlockDataNotifyTask;
-use muqsit\invmenu\utils\HolderData;
+use todoe56\shopui\libs\muqsit\invmenu\InvMenu;
+use todoe56\shopui\libs\muqsit\invmenu\InvMenuHandler;
+use todoe56\shopui\libs\muqsit\invmenu\tasks\DelayedFakeBlockDataNotifyTask;
+use todoe56\shopui\libs\muqsit\invmenu\utils\HolderData;
 
 use pocketmine\block\Block;
 use pocketmine\inventory\BaseInventory;

@@ -17,9 +17,9 @@
  *
 */
 
-namespace muqsit\invmenu\inventories;
+namespace todoe56\shopui\libs\muqsit\invmenu\inventories;
 
-use muqsit\invmenu\utils\HolderData;
+use todoe56\shopui\libs\muqsit\invmenu\utils\HolderData;
 
 use pocketmine\block\Block;
 use pocketmine\nbt\tag\CompoundTag;

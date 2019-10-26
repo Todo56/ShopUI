@@ -17,17 +17,30 @@
  *
 */
 
-namespace muqsit\invmenu;
+namespace todoe56\shopui\libs\muqsit\invmenu\inventories;
 
-use muqsit\invmenu\inventories\ChestInventory;
-use muqsit\invmenu\inventories\DoubleChestInventory;
-use muqsit\invmenu\inventories\HopperInventory;
+use pocketmine\block\Block;
+use pocketmine\network\mcpe\protocol\types\WindowTypes;
 
-interface MenuIds{
+class HopperInventory extends SingleBlockInventory{
 
-	// This interface exists for backwards compatibility.
+	public function getBlock() : Block{
+		return Block::get(Block::HOPPER_BLOCK);
+	}
 
-	const TYPE_CHEST = ChestInventory::class;
-	const TYPE_DOUBLE_CHEST = DoubleChestInventory::class;
-	const TYPE_HOPPER = HopperInventory::class;
+	public function getNetworkType() : int{
+		return WindowTypes::HOPPER;
+	}
+
+	public function getTileId() : string{
+		return "Hopper";
+	}
+
+	public function getName() : string{
+		return "Hopper";
+	}
+
+	public function getDefaultSize() : int{
+		return 5;
+	}
 }

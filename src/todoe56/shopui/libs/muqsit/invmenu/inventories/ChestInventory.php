@@ -17,30 +17,31 @@
  *
 */
 
-namespace muqsit\invmenu\inventories;
+namespace todoe56\shopui\libs\muqsit\invmenu\inventories;
 
-use pocketmine\block\Block;
-use pocketmine\network\mcpe\protocol\types\WindowTypes;
+use todoe56\shopui\libs\pocketmine\block\Block;
+use todoe56\shopui\libs\pocketmine\network\mcpe\protocol\types\WindowTypes;
+use todoe56\shopui\libs\pocketmine\tile\Tile;
 
-class HopperInventory extends SingleBlockInventory{
+class ChestInventory extends SingleBlockInventory{
 
 	public function getBlock() : Block{
-		return Block::get(Block::HOPPER_BLOCK);
+		return Block::get(Block::CHEST);
 	}
 
 	public function getNetworkType() : int{
-		return WindowTypes::HOPPER;
+		return WindowTypes::CONTAINER;
 	}
 
 	public function getTileId() : string{
-		return "Hopper";
+		return Tile::CHEST;
 	}
 
 	public function getName() : string{
-		return "Hopper";
+		return "Chest";
 	}
 
 	public function getDefaultSize() : int{
-		return 5;
+		return 27;
 	}
 }
