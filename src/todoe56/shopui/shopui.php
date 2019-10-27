@@ -37,7 +37,7 @@ class shopui extends PluginBase implements Listener
     public function onCommand(CommandSender $sender, Command $cmd, String $label, array $args): bool
     {
         switch ($cmd->getName()) {
-            case "shop":
+            case "ps":
                 if ($sender instanceof Player) {
                     $this->openShopo($sender);
                 } else {
