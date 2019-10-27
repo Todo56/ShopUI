@@ -6,6 +6,7 @@ projects:
     path: ""
     excludeDirs:
     - "resources/github"
+    icon: "ShopUI.png"
     libs:
     - src: todoe56/shopui/libs/muqsit/invmenu/InvMenu
       version: ^2.1.0
