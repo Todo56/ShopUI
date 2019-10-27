@@ -11,20 +11,28 @@ use pocketmine\inventory\transaction\action\SlotChangeAction;
 use todoe56\shopui\libs\muqsit\invmenu\{InvMenu, InvMenuHandler};
 use pocketmine\item\Item;
 use pocketmine\Player;
+use todoe56\shopui\shopui;
+use todoe56\shopui\tasks\OpenShopDelayedTask;
+use todoe56\shopui\tasks\OpenShopoDeyaledTask;
+use todoe56\shopui\tasks\OpenShopeDelayedTask;
+
 class ShopCommand extends Command {
     protected $description;
     protected $usageMessage;
     protected $config;
     protected $getDataFolder;
     protected $economy;
-    public function __construct($command, $datafolder, $economy) {
+    public $itemClicked;
+    public $sender;
+    protected $scheduler;
+    public function __construct($command, $datafolder, $economy, $scheduler) {
         parent::__construct($command);
         $this->description = "Shop command by Todoe56.";
         $this->usageMessage = "/$command";
         $this->setPermission("$command" . ".command");
         $this->getDataFolder = $datafolder;
         $this->economy = $economy;
-
+        $this->scheduler = $scheduler;
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
@@ -59,12 +67,13 @@ class ShopCommand extends Command {
         $menu->setListener(function (Player $sender, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action): bool {
             if ($itemClicked->getName() == "§4Close") {
                 $sender->removeWindow($action->getInventory());
-
             }
             if ($itemClicked != "Air") {
                 $sender->removeWindow($action->getInventory());
-                usleep(100000);
-                $this->openShop($itemClicked->getName(), $sender);
+                $this->itemClicked = $itemClicked;
+                $this->sender = $sender;
+
+                $this->scheduler->scheduleDelayedTask(new OpenShopDelayedTask($this, $itemClicked, $sender), 2);
             }
             return true;
         });
@@ -73,7 +82,7 @@ class ShopCommand extends Command {
         $menu->send($sender);
     }
 
-    public function openShop($category, Player $player)
+    public function OpenShop($category, Player $player)
     {
         $this->category = $category;
         $all = $this->config->getAll();
@@ -120,15 +129,15 @@ class ShopCommand extends Command {
                     $all = $this->config->getAll();
                     if ($itemClicked->getName() == "§4Go Back") {
                         $sender->removeWindow($action->getInventory());
-                        usleep(100000);
-                        $this->openShopo($sender);
+                        $this->scheduler->scheduleDelayedTask(new OpenShopoDeyaledTask($this, $sender), 2);
+
                     }
                     foreach ($all["categories"] as $o) {
                         foreach ($o["items"] as $itemm) {
                             if ($itemm["name"] == $name) {
                                 $sender->removeWindow($action->getInventory());
-                                usleep(10000);
-                                $this->openShop($this->category, $sender);
+                                $this->scheduler->scheduleDelayedTask(new OpenShopeDelayedTask($this, $this->category, $sender), 2);
+//oooooooooooooooo
                                 $item = Item::get($itemm["id"], $itemm["meta"]);
                                 $item->setCount($itemm["amount"]);
                                 if ($sender->getInventory()->canAddItem($item)) {

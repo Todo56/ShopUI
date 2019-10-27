@@ -33,7 +33,7 @@ class shopui extends PluginBase implements Listener
             $this->getLogger()->error("Please install EconomyAPI");
         }
         $commandMap = $this->getServer()->getCommandMap();
-        $commandMap->register($this->config->get("shopcommand"), new ShopCommand($this->config->get("shopcommand"), $this->getDataFolder(), $this->economy));
+        $commandMap->register($this->config->get("shopcommand"), new ShopCommand($this->config->get("shopcommand"), $this->getDataFolder(), $this->economy, $this->getScheduler()));
     }
 
 
