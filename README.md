@@ -1,5 +1,5 @@
 ## Information
-ShopUI is a simple shop system with categories made with a chestui.<br>
+ShopUI is a simple shop system with categories made with a chestui using https://github.com/Muqsit/InvMenu.<br>
 [![](https://poggit.pmmp.io/shield.state/ShopUI)](https://poggit.pmmp.io/p/ShopUI)
 [![HitCount](http://hits.dwyl.io/Todo56/ShopUI.svg)](http://hits.dwyl.io/Todo56/ShopUI)
 [![](https://poggit.pmmp.io/shield.api/ShopUI)](https://poggit.pmmp.io/p/ShopUI)
