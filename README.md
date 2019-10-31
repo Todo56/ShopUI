@@ -8,7 +8,7 @@ ShopUI is a simple shop system with categories made with a chestui using https:/
 ## Commands
 The main and only command is /shop.
 ## Contact
-If you find any bug please open a github issue.
+If you find any bug please open a github issue. If you have any suggestions please dm me in discord (Todo56#0001)
 ## Dependecies
 The only dependency is economy API.
 ## Features
@@ -41,6 +41,8 @@ categories: # Categories or your shop
           - "sharpness:120"
           - "efficiency:5"
         keepname: true # Whether the item will keep the name specified (optional) (bool)
+        commands:
+          - kill {player} #command to be executed (optional) {player} is the player who bought the item.
       - name: §dRegeneration I Potion
         id: 373
         meta: 28
