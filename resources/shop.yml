@@ -20,6 +20,8 @@ categories: # Categories or your shop
         enchantments: # enchantments of the item (optional)
           - "sharpness:120"
           - "efficiency:5"
+        commands:
+          - kill {player} #if commands to be executed by console (optional) {player} is the player that bought the item.
         keepname: true # Whether the item will keep the name specified (optional) (bool)
       - name: §dRegeneration I Potion
         id: 373

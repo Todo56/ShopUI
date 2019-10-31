@@ -2,6 +2,7 @@
 namespace todoe56\shopui\commands;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\ConsoleCommandSender;
 use pocketmine\utils\TextFormat;
 use pocketmine\Server;
 use pocketmine\utils\Config;
@@ -137,7 +138,6 @@ class ShopCommand extends Command {
                             if ($itemm["name"] == $name) {
                                 $sender->removeWindow($action->getInventory());
                                 $this->scheduler->scheduleDelayedTask(new OpenShopeDelayedTask($this, $this->category, $sender), 2);
-//oooooooooooooooo
                                 $item = Item::get($itemm["id"], $itemm["meta"]);
                                 $item->setCount($itemm["amount"]);
                                 if ($sender->getInventory()->canAddItem($item)) {
@@ -160,6 +160,11 @@ class ShopCommand extends Command {
                                         if(isset($itemm["keepname"])){
                                             if($itemm["keepname"] == true){
                                                 $item->setCustomName($name);
+                                            }
+                                        }
+                                        if(isset($itemm["commands"])){
+                                            foreach($itemm["commands"] as $command){
+                                                $sender->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", $sender->getName(), $command));
                                             }
                                         }
                                         $sender->getInventory()->addItem($item);
