@@ -20,7 +20,8 @@ The only dependency is economy API.
 
 ## Example config
 ```
-hopname: Select a Category #Sets the shop name
+shopcommand: shop
+shopname: Select a Category #Sets the shop name
 shoptype: single #single or double
 categories: # Categories or your shop
   potions: # Category id
