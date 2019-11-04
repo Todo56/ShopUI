@@ -24,9 +24,8 @@ class shopui extends PluginBase implements Listener
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
         $this->saveResource("shop.yml");
-        if (!InvMenuHandler::isRegistered()) {
-            InvMenuHandler::register($this);
-        }
+		$this->initVirions();
+
         $this->config = new Config($this->getDataFolder() . "shop.yml", Config::YAML);
         $this->economy = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
         if (!$this->economy) {
@@ -35,6 +34,13 @@ class shopui extends PluginBase implements Listener
         $commandMap = $this->getServer()->getCommandMap();
         $commandMap->register("ShopUI", new ShopCommand($this->config->get("shopcommand"), $this->getDataFolder(), $this->economy, $this->getScheduler()));
     }
-
+    private function initVirions() : void{
+        if(!class_exists(InvMenuHandler::class)){
+            throw new \RuntimeError($this->getName() . " depends upon 'InvMenu' virion for it's functioning. If you would still like to continue running " . $this->getName() . " from source, install the DEVirion plugin and download InvMenu to the /virions folder. Alternatively, you can download the pre-compiled PlayerVaults .phar file from poggit and not worry about installing the dependencies separately.");
+        }
+        if(!InvMenuHandler::isRegistered()){
+            InvMenuHandler::register($this);
+        }
+    }
 
 }
